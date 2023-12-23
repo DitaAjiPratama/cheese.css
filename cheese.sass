@@ -1,0 +1,8 @@
+$outline-colors-list: ("white": white, "black": black, "grey": grey )
+
+$outline-weight-pos: 1px
+$outline-weight-neg: $outline-weight-pos * -1
+
+@each $outline-name, $outline-color in $outline-colors-list
+  .logo-outline-#{$outline-name}
+    filter: drop-shadow($outline-weight-pos 0 0 $outline-color) drop-shadow($outline-weight-neg 0 $outline-color) drop-shadow(0 $outline-weight-pos 0 $outline-color) drop-shadow(0 $outline-weight-neg 0 $outline-color) drop-shadow($outline-weight-pos $outline-weight-pos 0 $outline-color) drop-shadow($outline-weight-pos $outline-weight-neg 0 $outline-color) drop-shadow($outline-weight-neg $outline-weight-pos 0 $outline-color) drop-shadow($outline-weight-neg $outline-weight-neg 0 $outline-color)
